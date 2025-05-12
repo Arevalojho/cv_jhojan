@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jhojan José Arevalo Sandoval</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --hover-color: #2980b9;
+            --light-bg: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+            background-color: #f5f6fa;
+        }
+
+        header {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .note {
+            color: #3c94e7;
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        /* Estilos para habilidades interactivas */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skill-tag {
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            font-weight: 500;
+        }
+
+        .skill-tag:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+
+        .skill-tag.active {
+            background: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .skill-content {
+            width: 100%;
+        }
+
+        .skill-details {
+            display: none;
+            padding: 15px;
+            background: var(--light-bg);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 0 5px 5px 0;
+            margin-top: 5px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .skill-details ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .skill-details li {
+            margin-bottom: 5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Botón PDF */
+        #pdfButton {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 30px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        #pdfButton:hover {
+            background: var(--hover-color);
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .skills-list {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <img src="foto.jpg" alt="Foto de Jhojan José Arevalo Sandoval" class="profile-photo">
+        <div class="contact-info">
+            <h1>Jhojan José Arevalo Sandoval</h1>
+            <p class="note">ESQ DOCTOR DIAZ A PENEIRO EDIF NAVARRO PISO 4 APT 41 URB CATEDRAL CARACAS DISTRITO CAPITAL ZONA POSTAL 1010</p>
+            <p><i class="fas fa-phone"></i> Teléfono: (0412)603-42-97</p>
+            <p><i class="fas fa-envelope"></i> Email: arevalo.jhojan@gmail.com, arevalosan.jhojan@gmail.com</p>
+        </div>
+    </header>
+
+    <!-- PERFIL PROFESIONAL -->
+    <section>
+        <h2>Perfil Profesional</h2>
+        <p>Profesional con amplia experiencia en administración pública, planificación presupuestaria. Especializado en formulación y ejecución de presupuestos, análisis contable. Conocimientos en desarrollo de software.</p>
+    </section>
+
+    <!-- EDUCACIÓN -->
+    <section>
+        <h2>Educación</h2>
+        <article>
+            <h3>Instituto Universitario de Tecnología Dr. Federico Rivero Palacio (IUTFRP)</h3>
+            <p><strong>Título:</strong> T.S.U en Administración y Gestión</p>
+            <p><strong>Año:</strong> 2006-2007</p>
+        </article>
+        <article>
+            <h3>Escuela Técnica Comercial "Santos Michelena"</h3>
+            <p><strong>Título:</strong> Técnico Medio en Comercios y Servicio Administrativo</p>
+            <p><strong>Año:</strong> 2003-2005</p>
+        </article>
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <section>
+        <h2>Experiencia Laboral</h2>
+        <article>
+            <h3>Fundación Misión Cultural</h3>
+            <p><strong>Cargo:</strong> Director de Planificación y Presupuesto</p>
+            <p><strong>Periodo:</strong> 2019 - Actualidad</p>
+            <ul>
+                <li>Coordinación y revisión de información presupuestaria</li>
+                <li>Formulación y Reformulación del presupuesto</li>
+                <li>Elaboración de ejecuciones presupuestarias</li>
+                <li>Revisión de modificaciones presupuestarias</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Fundación Negra Hipólita</h3>
+            <p><strong>Cargo:</strong> Coordinador de Presupuesto</p>
+            <p><strong>Periodo:</strong> (15/10/2022 al 28/02/2025)</p>
+            <ul>
+                <li>Coordinar, Revisar y Presentar la información en materia de presupuesto.</li>
+                <li>Elaboración de ejecuciones presupuestarias</li>
+                <li>Revisión de modificaciones presupuestarias</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- HABILIDADES INTERACTIVAS -->
+    <section>
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <!-- Grupo de habilidades -->
+            <div class="skills-list">
+                <div class="skill-tag" onclick="toggleSkill('presupuestaria')">
+                    Presupuestaria
+                </div>
+                <div class="skill-tag" onclick="toggleSkill('planificacion')">
+                    Planificación
+                </div>
+                <div class="skill-tag" onclick="toggleSkill('contable')">
+                    Análisis Contable
+                </div>
+                <div class="skill-tag" onclick="toggleSkill('programacion')">
+                    Desarrollo y Programación
+                </div>
+            </div>
+            
+            <!-- Contenedor de detalles -->
+            <div class="skill-content">
+                <!-- Detalle Presupuestaria -->
+                <div id="presupuestaria" class="skill-details">
+                    <p>Experiencia en formulación, ejecución y control presupuestario en entes públicos. Manejo de SISPRE y otros sistemas de Presupuestarios.</p>
+                    <ul>
+                        <li>Elaboración de instructivos Nº 2, 3, 4, 5</li>
+                        <li>Análisis de ejecución física y financiera</li>
+                    </ul>
+                </div>
+                
+                <!-- Detalle Planificación -->
+                <div id="planificacion" class="skill-details">
+                    <p>Experiencia en formulación, ejecución y control de Planificación de Presupuesto por Proyectos en entes públicos. Manejo de SIPES-APN.</p>
+                    <ul>
+                        <li>Elaboración de POA</li>
+                        <li>Elaboración de Informes de Gestión</li>
+                    </ul>
+                </div>
+                
+                <!-- Detalle Contable -->
+                <div id="contable" class="skill-details">
+                    <p>Gestión contable avanzada con énfasis en el sector público. Dominio de conciliaciones bancarias y estados financieros.</p>
+                    <ul>
+                        <li>Elaboración de ajustes contables</li>
+                        <li>Revisión de Contabilidad y Presupuesto</li>
+                    </ul>
+                </div>
+                
+                <!-- Detalle Programación -->
+                <div id="programacion" class="skill-details">
+                    <p>Dominio de lenguajes de Programación:</p>
+                    <ul>
+                        <li>Html, XML</li>
+                        <li>Java, Python, PHP</li>
+                        <li>JDBC para conexión a bases de datos, SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón PDF -->
+    <button id="pdfButton">Descargar PDF</button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Variable para almacenar la habilidad activa
+        let activeSkill = null;
+        
+        function toggleSkill(skillId) {
+            const skillElement = document.getElementById(skillId);
+            const skillTag = document.querySelector(`.skill-tag[onclick="toggleSkill('${skillId}')"]`);
+            
+            // Si ya está activo, lo ocultamos
+            if (activeSkill === skillId) {
+                skillElement.style.display = 'none';
+                skillTag.classList.remove('active');
+                activeSkill = null;
+                return;
+            }
+            
+            // Ocultamos todos los detalles primero
+            document.querySelectorAll('.skill-details').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            
+            // Removemos la clase active de todos los tags
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            
+            // Mostramos el detalle seleccionado
+            skillElement.style.display = 'block';
+            
+            // Marcamos el tag como activo
+            skillTag.classList.add('active');
+            
+            // Actualizamos la variable
+            activeSkill = skillId;
+        }
+
+        // Cerrar detalles al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            if (!e.target.classList.contains('skill-tag') && 
+                !e.target.closest('.skill-details')) {
+                document.querySelectorAll('.skill-details').forEach(detail => {
+                    detail.style.display = 'none';
+                });
+                document.querySelectorAll('.skill-tag').forEach(tag => {
+                    tag.classList.remove('active');
+                });
+                activeSkill = null;
+            }
+        });
+
+        // Generar PDF
+        function generarPDF() {
+            document.getElementById('pdfButton').style.display = 'none';
+            
+            // Mostrar todos los detalles de habilidades para el PDF
+            document.querySelectorAll('.skill-details').forEach(detail => {
+                detail.style.display = 'block';
+            });
+            
+            html2canvas(document.body, {
+                scale: 2,
+                logging: true,
+                useCORS: true
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png', 1.0);
+                const pdf = new jspdf.jsPDF({
+                    orientation: 'portrait',
+                    unit: 'mm',
+                    format: 'a4'
+                });
+
+                const pageWidth = pdf.internal.pageSize.getWidth();
+                const pageHeight = pdf.internal.pageSize.getHeight();
+                const imgRatio = canvas.width / canvas.height;
+                
+                let imgWidth = pageWidth;
+                let imgHeight = pageWidth / imgRatio;
+
+                if(imgHeight > pageHeight) {
+                    imgHeight = pageHeight;
+                    imgWidth = imgHeight * imgRatio;
+                }
+
+                const x = (pageWidth - imgWidth) / 2;
+                const y = (pageHeight - imgHeight) / 2;
+
+                pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
+                pdf.save('CV_Jhojan_Arevalo.pdf');
+                
+                // Restaurar estado original de los detalles
+                document.querySelectorAll('.skill-details').forEach(detail => {
+                    detail.style.display = 'none';
+                });
+                if (activeSkill) {
+                    document.getElementById(activeSkill).style.display = 'block';
+                }
+                
+                document.getElementById('pdfButton').style.display = 'block';
+            });
+        }
+
+        document.getElementById('pdfButton').addEventListener('click', generarPDF);
+    </script>
+</body>
+</html>
